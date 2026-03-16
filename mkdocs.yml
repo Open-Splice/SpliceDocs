@@ -1,0 +1,25 @@
+site_name: Splice Documentation
+
+theme:
+  name: null
+  custom_dir: cinder
+
+nav:
+  - Home: index.md
+  - Installation: install.md
+  - API: api.md
+  - Contributing: contribute.md
+  - Learn Splice:
+      - Introduction: learn/learn.md
+      - Run Splice: learn/runsplice.md
+      - Variables: learn/vars.md
+      - Input and Output: learn/io.md
+      - Arithmetic: learn/arithmetic.md
+      - Conditionals: learn/conditions.md
+      - Loops: learn/loops.md
+      - Functions: learn/funcs.md
+      - Error Handling: learn/errlog.md
+      - Examples: learn/examples.md
+  
+extra_javascript:
+  - js/splice-highlight.js
