@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../img/favicon.ico">
+
+    
+    <title>Installation - Splice Documentation</title>
+    
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
+    <link href='//rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../css/base.min.css" rel="stylesheet">
+    <link href="../css/cinder.min.css" rel="stylesheet">
+
+    
+        
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/github.min.css">
+        
+    
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+
+    
+
+     
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+
+            
+              <a class="navbar-brand" href="..">Splice Documentation</a>
+            
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="..">Home</a>
+                    </li>
+                
+                
+                
+                    <li class="active">
+                        <a href="./">Installation</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../api/">API</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../contribute/">Contributing</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Learn Splice <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../learn/learn/">Introduction</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../learn/runsplice/">Run Splice</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../learn/vars/">Variables</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../learn/io/">Input and Output</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../learn/arithmetic/">Arithmetic</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../learn/conditions/">Conditionals</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../learn/loops/">Loops</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../learn/funcs/">Functions</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../learn/errlog/">Error Handling</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../learn/examples/">Examples</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                            <i class="fas fa-search"></i> Search
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="..">
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="next" href="../api/">
+                            Next <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#installing-splice">Installing Splice</a></li>
+            <li class="second-level"><a href="#1-clone-the-repository">1. Clone the Repository</a></li>
+                
+            <li class="second-level"><a href="#2-build-splice">2. Build Splice</a></li>
+                
+            <li class="second-level"><a href="#3-run-splice">3. Run Splice</a></li>
+                
+            <li class="second-level"><a href="#4-example-program">4. Example Program</a></li>
+                
+            <li class="second-level"><a href="#5-requirements">5. Requirements</a></li>
+                
+            <li class="second-level"><a href="#6-macos-setup">6. macOS Setup</a></li>
+                
+            <li class="second-level"><a href="#7-linux-setup">7. Linux Setup</a></li>
+                
+            <li class="second-level"><a href="#8-windows-setup">8. Windows Setup</a></li>
+                
+            <li class="second-level"><a href="#9-embedded-builds">9. Embedded Builds</a></li>
+                
+            <li class="second-level"><a href="#10-verifying-installation">10. Verifying Installation</a></li>
+                
+            <li class="second-level"><a href="#11-next-steps">11. Next Steps</a></li>
+                
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<h1 id="installing-splice">Installing Splice</h1>
+<p>This guide explains how to install and build <strong>Splice</strong>, a lightweight embedded-ready programming language runtime.</p>
+<p>Splice runs on:</p>
+<ul>
+<li>macOS</li>
+<li>Linux</li>
+<li>Windows</li>
+<li>Embedded systems (manual builds)</li>
+</ul>
+<hr />
+<h2 id="1-clone-the-repository">1. Clone the Repository</h2>
+<p>First download the source code.</p>
+<pre><code>git clone https://github.com/Open-Splice/Splice.git
+cd Splice
+</code></pre>
+<hr />
+<h2 id="2-build-splice">2. Build Splice</h2>
+<p>Compile using <code>./build.sh --force</code>.</p>
+<pre><code>./build.sh --force
+</code></pre>
+<p>After compilation the runtime binary will appear as:</p>
+<pre><code>./splice
+</code></pre>
+<hr />
+<h2 id="3-run-splice">3. Run Splice</h2>
+<p>Start the interpreter:</p>
+<pre><code>./splice
+</code></pre>
+<p>Run a program:</p>
+<pre><code>./splice hello.spl
+</code></pre>
+<hr />
+<h2 id="4-example-program">4. Example Program</h2>
+<p>Create a file called <code>hello.spl</code>.</p>
+<pre><code>print("Hello from Splice!")
+</code></pre>
+<p>Run it:</p>
+<pre><code>./splice hello.spl
+</code></pre>
+<hr />
+<h2 id="5-requirements">5. Requirements</h2>
+<p>Minimum requirements:</p>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Requirement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Compiler</td>
+<td>GCC or Clang (C99 compatible)</td>
+</tr>
+<tr>
+<td>Build Tool</td>
+<td>./build.sh --force</td>
+</tr>
+<tr>
+<td>RAM</td>
+<td>~1–10 MB</td>
+</tr>
+</tbody>
+</table>
+<p>Optional tools:</p>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Git</td>
+<td>Cloning repository</td>
+</tr>
+<tr>
+<td>C./build.sh --force</td>
+<td>Alternative build system</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="6-macos-setup">6. macOS Setup</h2>
+<p>Install developer tools:</p>
+<pre><code>xcode-select --install
+</code></pre>
+<p>Then build:</p>
+<pre><code>./build.sh --force
+</code></pre>
+<hr />
+<h2 id="7-linux-setup">7. Linux Setup</h2>
+<p>Install build tools.</p>
+<p>Ubuntu / Debian:</p>
+<pre><code>sudo apt install build-essential
+</code></pre>
+<p>Fedora:</p>
+<pre><code>sudo dnf groupinstall "Development Tools"
+</code></pre>
+<p>Arch:</p>
+<pre><code>sudo pacman -S base-devel
+</code></pre>
+<p>Then build:</p>
+<pre><code>./build.sh --force
+</code></pre>
+<hr />
+<h2 id="8-windows-setup">8. Windows Setup</h2>
+<p>You can build Splice using:</p>
+<ul>
+<li>MinGW</li>
+<li>MSYS2</li>
+<li>Windows Subsystem for Linux (WSL)</li>
+</ul>
+<p>Example using MSYS2:</p>
+<pre><code>pacman -S mingw-w64-x86_64-gcc ./build.sh --force
+./build.sh --force
+</code></pre>
+<hr />
+<h2 id="9-embedded-builds">9. Embedded Builds</h2>
+<p>Splice is designed to run on constrained systems.</p>
+<p>Typical embedded workflow:</p>
+<ol>
+<li>Cross-compile the runtime</li>
+<li>Link with firmware</li>
+<li>Run Splice scripts inside device firmware</li>
+</ol>
+<p>More details will be added in the <strong>embedded documentation</strong>.</p>
+<hr />
+<h2 id="10-verifying-installation">10. Verifying Installation</h2>
+<p>Run:</p>
+<pre><code>./splice
+</code></pre>
+<p>You should see the Splice runtime start successfully.</p>
+<hr />
+<h2 id="11-next-steps">11. Next Steps</h2>
+<ul>
+<li>Read the language guide</li>
+<li>Write your first program</li>
+<li>Explore the Splice standard library</li>
+</ul>
+<p>Project repository:</p>
+<p><a href="https://github.com/Open-Splice/Splice">https://github.com/Open-Splice/Splice</a></p></div>
+        
+        
+    </div>
+
+    
+      <footer class="col-md-12 text-center">
+          
+          
+            <hr>
+            <p>
+            <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</small>
+            </p>
+          
+
+          
+          
+      </footer>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../js/bootstrap-3.0.3.min.js"></script>
+
+    
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
+        
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    <script>var base_url = ".."</script>
+    
+    <script src="../js/base.js"></script>
+    <script src="../js/splice-highlight.js"></script>
+    <script src="../search/main.js"></script>
+
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                    <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    </body>
+
+</html>

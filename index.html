@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="img/favicon.ico">
+
+    
+    <title>Home - Splice Documentation</title>
+    
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
+    <link href='//rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="css/base.min.css" rel="stylesheet">
+    <link href="css/cinder.min.css" rel="stylesheet">
+
+    
+        
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/github.min.css">
+        
+    
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+
+    
+
+     
+</head>
+
+<body class="homepage" >
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+
+            
+              <a class="navbar-brand" href=".">Splice Documentation</a>
+            
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li class="active">
+                        <a href=".">Home</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="install/">Installation</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="api/">API</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="contribute/">Contributing</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Learn Splice <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="learn/learn/">Introduction</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="learn/runsplice/">Run Splice</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="learn/vars/">Variables</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="learn/io/">Input and Output</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="learn/arithmetic/">Arithmetic</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="learn/conditions/">Conditionals</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="learn/loops/">Loops</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="learn/funcs/">Functions</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="learn/errlog/">Error Handling</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="learn/examples/">Examples</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                            <i class="fas fa-search"></i> Search
+                        </a>
+                    </li>
+                    <li class="disabled">
+                        <a rel="prev" >
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="next" href="install/">
+                            Next <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#splice-programming-language">Splice Programming Language</a></li>
+            <li class="second-level"><a href="#history-of-splice">History of Splice</a></li>
+                
+            <li class="second-level"><a href="#design-goals">Design Goals</a></li>
+                
+                <li class="third-level"><a href="#small-runtime">Small Runtime</a></li>
+                <li class="third-level"><a href="#portability">Portability</a></li>
+                <li class="third-level"><a href="#predictable-execution">Predictable Execution</a></li>
+                <li class="third-level"><a href="#easy-embedding">Easy Embedding</a></li>
+            <li class="second-level"><a href="#features">Features</a></li>
+                
+            <li class="second-level"><a href="#hello-world-example">Hello World Example</a></li>
+                
+            <li class="second-level"><a href="#learning-splice">Learning Splice</a></li>
+                
+            <li class="second-level"><a href="#project-repository">Project Repository</a></li>
+                
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<h1 id="splice-programming-language">Splice Programming Language</h1>
+<p><strong>Splice</strong> is a lightweight, embeddable programming language designed for portability, simplicity, and small runtime environments. It is built in C and designed to run on a wide range of systems, including desktop computers, embedded devices, and custom operating systems.</p>
+<p>Splice aims to provide a simple and predictable scripting environment while remaining small enough to integrate directly into system software and firmware.</p>
+<hr />
+<h2 id="history-of-splice">History of Splice</h2>
+<p>Splice was created as an experiment in building a programming language that could bridge the gap between traditional scripting languages and low-level system programming.</p>
+<p>Many popular embedded languages today fall into two categories:</p>
+<p>• <strong>Low-level languages</strong> like C and C++ that provide high performance but can be difficult to learn and maintain.<br />
+• <strong>High-level scripting languages</strong> like Python or JavaScript that are easier to write but often require large runtimes and significant system resources.</p>
+<p>Splice was created to explore a different design approach: a <strong>small, portable scripting language with predictable execution and minimal runtime overhead</strong>.</p>
+<p>The project began as a learning and research effort focused on:</p>
+<ul>
+<li>understanding how programming languages work internally</li>
+<li>designing a small virtual machine</li>
+<li>experimenting with custom bytecode execution</li>
+<li>creating a scripting language that could run across many environments</li>
+</ul>
+<p>Over time, the project evolved into a full language runtime with components such as:</p>
+<ul>
+<li>a lexer and parser</li>
+<li>a bytecode instruction system</li>
+<li>a virtual machine runtime</li>
+<li>a small standard runtime library</li>
+</ul>
+<p>Splice continues to evolve as the language design and runtime implementation improve.</p>
+<hr />
+<h2 id="design-goals">Design Goals</h2>
+<p>Splice focuses on several core principles.</p>
+<h3 id="small-runtime">Small Runtime</h3>
+<p>The runtime is intentionally lightweight so it can run in constrained environments such as embedded systems or experimental operating systems.</p>
+<h3 id="portability">Portability</h3>
+<p>Because the runtime is written in C, Splice programs can run anywhere the runtime can be compiled.</p>
+<h3 id="predictable-execution">Predictable Execution</h3>
+<p>Splice avoids heavy background systems and complex runtime behavior. Programs execute in a clear and deterministic way.</p>
+<h3 id="easy-embedding">Easy Embedding</h3>
+<p>Splice can be integrated into other software projects, allowing developers to add scripting capabilities to existing applications.</p>
+<hr />
+<h2 id="features">Features</h2>
+<p>Some of the core features of Splice include:</p>
+<ul>
+<li>Simple syntax designed to be easy to read and write</li>
+<li>Lightweight runtime written in C</li>
+<li>Portable across operating systems and hardware platforms</li>
+<li>Script execution using a custom virtual machine</li>
+<li>Suitable for experimentation with language and VM design</li>
+</ul>
+<hr />
+<h2 id="hello-world-example">Hello World Example</h2>
+<p>A simple Splice program:</p>
+<pre><code class="language-splice">print(&quot;Hello, Splice!&quot;)
+</code></pre>
+<p>Save the file as:</p>
+<pre><code class="language-text">hello.spl
+</code></pre>
+<p>Run it using the runtime:</p>
+<pre><code class="language-bash">./splice hello.spl
+</code></pre>
+<hr />
+<h2 id="learning-splice">Learning Splice</h2>
+<p>To start learning the language, see the <strong>Learn Splice</strong> section of the documentation.</p>
+<p>Topics include:</p>
+<ul>
+<li>Running Splice programs</li>
+<li>Variables</li>
+<li>Input and output</li>
+<li>Arithmetic</li>
+<li>Conditional statements</li>
+<li>Loops</li>
+<li>Functions</li>
+<li>Error handling</li>
+</ul>
+<hr />
+<h2 id="project-repository">Project Repository</h2>
+<p>Splice is open source and available on GitHub:</p>
+<p><a href="https://github.com/Open-Splice/Splice">Link to page</a></p>
+<p>Contributions, experiments, and improvements are welcome.</p></div>
+        
+        
+    </div>
+
+    
+      <footer class="col-md-12 text-center">
+          
+          
+            <hr>
+            <p>
+            <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</small>
+            </p>
+          
+
+          
+          
+      </footer>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap-3.0.3.min.js"></script>
+
+    
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
+        
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    <script>var base_url = "."</script>
+    
+    <script src="js/base.js"></script>
+    <script src="js/splice-highlight.js"></script>
+    <script src="search/main.js"></script>
+
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                    <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    </body>
+
+</html>
+
+<!--
+MkDocs version : 1.6.1
+Build Date UTC : 2026-03-16 22:19:02.097661+00:00
+-->

@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    
+    <link rel="shortcut icon" href="../img/favicon.ico">
+
+    
+    <title>API - Splice Documentation</title>
+    
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
+    <link href='//rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../css/base.min.css" rel="stylesheet">
+    <link href="../css/cinder.min.css" rel="stylesheet">
+
+    
+        
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/github.min.css">
+        
+    
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+
+    
+
+     
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+
+            
+              <a class="navbar-brand" href="..">Splice Documentation</a>
+            
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="..">Home</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../install/">Installation</a>
+                    </li>
+                
+                
+                
+                    <li class="active">
+                        <a href="./">API</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../contribute/">Contributing</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Learn Splice <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../learn/learn/">Introduction</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../learn/runsplice/">Run Splice</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../learn/vars/">Variables</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../learn/io/">Input and Output</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../learn/arithmetic/">Arithmetic</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../learn/conditions/">Conditionals</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../learn/loops/">Loops</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../learn/funcs/">Functions</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../learn/errlog/">Error Handling</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../learn/examples/">Examples</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                            <i class="fas fa-search"></i> Search
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../install/">
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="next" href="../contribute/">
+                            Next <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#splice-api-guide">Splice API Guide</a></li>
+            <li class="second-level"><a href="#embedding-splice-in-a-host-program">Embedding Splice in a Host Program</a></li>
+                
+            <li class="second-level"><a href="#desktop-embedding">Desktop Embedding</a></li>
+                
+            <li class="second-level"><a href="#embedded-systems">Embedded Systems</a></li>
+                
+            <li class="second-level"><a href="#registering-native-functions">Registering Native Functions</a></li>
+                
+            <li class="second-level"><a href="#writing-native-modules">Writing Native Modules</a></li>
+                
+            <li class="second-level"><a href="#registering-the-module">Registering the Module</a></li>
+                
+            <li class="second-level"><a href="#using-the-module-in-splice">Using the Module in Splice</a></li>
+                
+            <li class="second-level"><a href="#splice-value-system">Splice Value System</a></li>
+                
+            <li class="second-level"><a href="#execution-flow">Execution Flow</a></li>
+                
+            <li class="second-level"><a href="#when-to-use-native-modules">When to Use Native Modules</a></li>
+                
+            <li class="second-level"><a href="#summary">Summary</a></li>
+                
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<h1 id="splice-api-guide">Splice API Guide</h1>
+<p>This document explains how to use the <strong>Splice runtime API</strong> from C or C++.</p>
+<p>The API allows developers to:</p>
+<p>• embed the Splice runtime inside applications<br />
+• execute compiled <code>.spc</code> bytecode<br />
+• expose native C functions to Splice programs<br />
+• build native modules using the Splice SDK  </p>
+<p>Splice is designed so the same runtime works on <strong>desktop systems, embedded devices, and microcontrollers</strong>.</p>
+<hr />
+<h2 id="embedding-splice-in-a-host-program">Embedding Splice in a Host Program</h2>
+<p>Splice can be embedded inside any C or C++ application.</p>
+<p>The runtime implementation is contained in:</p>
+<pre><code>src/splice.h
+</code></pre>
+<p>A host program loads compiled bytecode (<code>.spc</code>) into memory and executes it.</p>
+<hr />
+<h2 id="desktop-embedding">Desktop Embedding</h2>
+<p>On desktop systems the host program simply loads a compiled <code>.spc</code> file and executes it.</p>
+<p>Minimal example:</p>
+<pre><code>#define SPLICE_NO_INLINE_MEMREADER
+
+#include &quot;src/splice.h&quot;
+#include &quot;src/sdk.h&quot;
+
+int main(void)
+{
+    unsigned char *buf = ...;   // load .spc file into memory
+    size_t size = ...;
+
+    if (!splice_execute_bytecode(buf, size)) {
+        return 1;
+    }
+
+    return 0;
+}
+</code></pre>
+<p>The host application is responsible for reading the <code>.spc</code> bytecode into memory.</p>
+<p>Execution begins when:</p>
+<pre><code>splice_execute_bytecode(buf, size)
+</code></pre>
+<p>is called.</p>
+<hr />
+<h2 id="embedded-systems">Embedded Systems</h2>
+<p>On embedded platforms the runtime is typically started using:</p>
+<pre><code>splice_run_embedded_program(...)
+</code></pre>
+<p>Example Arduino-style host:</p>
+<pre><code>#define SPLICE_PLATFORM_ARDUINO 1
+
+extern &quot;C&quot; {
+#include &quot;src/splice.h&quot;
+}
+
+extern &quot;C&quot; void splice_embed_print(const char *s) { Serial.print(s ? s : &quot;&quot;); }
+extern &quot;C&quot; void splice_embed_println(const char *s) { Serial.println(s ? s : &quot;&quot;); }
+extern &quot;C&quot; void splice_embed_delay_ms(unsigned long ms) { delay(ms); }
+extern &quot;C&quot; int splice_embed_input_available(void) { return Serial.available(); }
+extern &quot;C&quot; int splice_embed_input_read(void) { return Serial.read(); }
+
+static const unsigned char program[] = { /* compiled .spc bytes */ };
+
+void setup()
+{
+    Serial.begin(115200);
+    splice_run_embedded_program(program, sizeof(program));
+}
+
+void loop() {}
+</code></pre>
+<p>Embedded hosts provide platform-specific hooks for:</p>
+<p>• printing text<br />
+• delays<br />
+• input handling  </p>
+<hr />
+<h2 id="registering-native-functions">Registering Native Functions</h2>
+<p>Splice allows native C functions to be exposed directly to scripts.</p>
+<p>Native functions are registered using:</p>
+<pre><code>Splice_register_native(...)
+</code></pre>
+<p>These functions become callable inside Splice programs.</p>
+<hr />
+<h2 id="writing-native-modules">Writing Native Modules</h2>
+<p>Native modules allow developers to extend Splice using C code.</p>
+<p>Example native function:</p>
+<pre><code>#include &quot;sdk.h&quot;
+
+static Value my_add(int argc, Value *argv)
+{
+    if (argc &lt; 2) return value_number(0.0);
+
+    if (argv[0].type != VAL_NUMBER || argv[1].type != VAL_NUMBER) {
+        return value_number(0.0);
+    }
+
+    return value_number(argv[0].number + argv[1].number);
+}
+</code></pre>
+<p>This function:</p>
+<p>• receives arguments from the Splice runtime<br />
+• validates the argument types<br />
+• returns a <code>Value</code> back to the VM  </p>
+<hr />
+<h2 id="registering-the-module">Registering the Module</h2>
+<p>Modules register functions during initialization.</p>
+<pre><code>__attribute__((constructor))
+static void init_module(void)
+{
+    Splice_register_native(&quot;my_add&quot;, my_add);
+}
+</code></pre>
+<p>When the module loads, the function <code>my_add</code> becomes available inside Splice.</p>
+<hr />
+<h2 id="using-the-module-in-splice">Using the Module in Splice</h2>
+<p>Example Splice script:</p>
+<pre><code>import &quot;native_math.c&quot;
+
+print(my_add(2, 3))
+</code></pre>
+<p>Output:</p>
+<pre><code>5
+</code></pre>
+<hr />
+<h2 id="splice-value-system">Splice Value System</h2>
+<p>Native functions communicate with the VM using the <code>Value</code> type.</p>
+<p>Common helper constructors:</p>
+<pre><code>value_number(...)
+value_string(...)
+value_bool(...)
+</code></pre>
+<p>Values returned from native functions become the result visible in Splice scripts.</p>
+<hr />
+<h2 id="execution-flow">Execution Flow</h2>
+<p>Typical flow when embedding Splice:</p>
+<ol>
+<li>Host application loads <code>.spc</code> bytecode</li>
+<li>Optional native functions are registered</li>
+<li>Runtime executes bytecode</li>
+<li>Scripts call native functions when needed</li>
+</ol>
+<pre><code>Host Application
+       |
+       v
+Load .spc bytecode
+       |
+       v
+Register native functions
+       |
+       v
+splice_execute_bytecode(...)
+       |
+       v
+Splice VM runs program
+</code></pre>
+<hr />
+<h2 id="when-to-use-native-modules">When to Use Native Modules</h2>
+<p>Native modules are useful when:</p>
+<p>• accessing hardware<br />
+• interacting with operating system APIs<br />
+• implementing performance-critical code<br />
+• extending Splice with custom functionality  </p>
+<hr />
+<h2 id="summary">Summary</h2>
+<p>The Splice API enables:</p>
+<p>• embedding the runtime in applications<br />
+• executing compiled bytecode<br />
+• extending the language using native C modules  </p>
+<p>Because the runtime is written in C, it can run on nearly any platform where a C compiler is available.</p></div>
+        
+        
+    </div>
+
+    
+      <footer class="col-md-12 text-center">
+          
+          
+            <hr>
+            <p>
+            <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</small>
+            </p>
+          
+
+          
+          
+      </footer>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../js/bootstrap-3.0.3.min.js"></script>
+
+    
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
+        
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    <script>var base_url = ".."</script>
+    
+    <script src="../js/base.js"></script>
+    <script src="../js/splice-highlight.js"></script>
+    <script src="../search/main.js"></script>
+
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                    <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    </body>
+
+</html>
